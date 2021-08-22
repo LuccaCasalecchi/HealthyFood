@@ -25,6 +25,12 @@
   text-align: left;
 }
 
+/* .article__description {
+  color: var(--color-text);
+  font-family: 'Muli';
+  font-size: 1.6rem;
+  text-align: center;
+} */
 
 .article__author {
   display: flex;

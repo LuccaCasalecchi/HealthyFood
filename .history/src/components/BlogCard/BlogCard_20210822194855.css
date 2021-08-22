@@ -19,12 +19,18 @@
 .article__title {
   margin-top: 1.5rem;
 
-  color: #2D3561;
-  font-family: sans-serif;
+  color: var(--color-text-title);
+  font-family: 'Montserrat';
   font-size: 2.4rem;
   text-align: left;
 }
 
+/* .article__description {
+  color: var(--color-text);
+  font-family: 'Muli';
+  font-size: 1.6rem;
+  text-align: center;
+} */
 
 .article__author {
   display: flex;
@@ -36,7 +42,7 @@
   margin-left: 1rem;
 
   color: var(--color-text);
-  font-family: sans-serif;
+  font-family: 'Muli';
   font-size: 1.6rem;
 }
 

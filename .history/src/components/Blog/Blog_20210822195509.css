@@ -39,7 +39,7 @@
 /*Tablet*/
 @media (min-width: 481px) 
   and (max-width: 1100px) {
-  .blog__subtitle {
+  .blog__description {
     padding: 0 1.5rem;
   }
 }

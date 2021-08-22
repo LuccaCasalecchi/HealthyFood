@@ -18,7 +18,7 @@ export default function Blog() {
     <div>
    <section className='blog' id='blog'>
       <p className='blog__title'>Read Our Blog</p>
-      <p className='blog__subtitle'>
+      <p className='blog__description'>
         Far far away, behind the word mountains, far from the countries <br/>
         Vokalia and Consonantia, there live the blind texts.
       </p>
