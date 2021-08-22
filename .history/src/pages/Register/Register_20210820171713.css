@@ -1,0 +1,7 @@
+.register_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: top right;
+}

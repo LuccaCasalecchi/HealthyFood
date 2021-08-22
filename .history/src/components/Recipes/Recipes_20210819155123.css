@@ -1,0 +1,45 @@
+.recipes{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+
+
+.recipes__introduction {
+  max-width: 510px;
+}
+
+.introduction__title {
+  margin-bottom: 1.5rem;
+
+  color: #1D164D;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.introduction__description {
+  color: #c2c2c2;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.recipes__best {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipes_best > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

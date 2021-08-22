@@ -1,0 +1,8 @@
+.register_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url('../../images/Illustration.svg') no-repeat;
+  background-size: cover;
+  background-position: top right;
+}

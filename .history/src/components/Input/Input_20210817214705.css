@@ -1,0 +1,20 @@
+.input-container{
+  display: fles;
+}
+
+input{
+  width: 343px;
+  height: 52px;
+  border-radius: 6px;
+  border: 1px solid #2D3561;
+  text-align: center;
+}
+
+button{
+  width: 52px;
+  height: 52px;
+  background-color: white;
+  border: 12px solid #BADC58;
+  border-radius: 6px;
+
+}

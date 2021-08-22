@@ -1,0 +1,121 @@
+section{
+  background-color: #f8f8f8;
+}
+
+.register {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.register__form {
+  max-width: 800px;
+  padding: 10rem 1rem;
+  margin-top: 10%;
+  border: 7px solid #BADC58;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  color: #2D3561;
+  font-family: 'Montserrat';
+  font-size: 3.2rem;
+  font-weight: 700;
+ 
+}
+
+.form input{
+  margin: 20px;
+}
+
+
+.form button {
+  width: 30%;
+  margin-top: 3rem;
+  padding: 1.5rem;
+
+  color: var(--color-white);
+  background: var(--color-primary);
+  box-shadow: 5px 10px 20px 6px rgba(0,0,0,0.07);
+  font-family: 'Muli';
+  font-size: 1.6rem;
+  border: none;
+  border-radius: .5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+/*Phone*/
+@media (min-width: 320px) 
+  and (max-width: 480px) {
+  .form input {
+    width: 30rem;
+  }
+
+  .form input[id='name'] {
+    max-width: 30rem;
+  }
+
+  .form input[id='birthday'] {
+    max-width: 30rem;
+  }
+
+  .form input[id='CEP'] {
+    max-width: 30rem;
+  }
+
+  .form input[id='number'] {
+    max-width: 15rem;
+  }
+  
+  .form input[id='birthday'] {
+    max-width: 18rem;
+  }
+  
+  .form input[id='city'] {
+    max-width: 21rem;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 481px) 
+  and (max-width: 1100px) {
+  .form input {
+    width: 30rem;
+  }
+
+  .form input[id='name'] {
+    max-width: 50rem;
+  }
+
+  .form input[id='birthday'] {
+    max-width: 30rem;
+  }
+
+  .form input[id='CEP'] {
+    max-width: 30rem;
+  }
+
+  .form input[id='number'] {
+    max-width: 15rem;
+  }
+  
+  .form input[id='birthday'] {
+    max-width: 18rem;
+  }
+  
+  .form input[id='city'] {
+    max-width: 21rem;
+  }
+}

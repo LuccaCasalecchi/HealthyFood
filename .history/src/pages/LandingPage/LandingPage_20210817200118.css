@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+
+
+.search-recipes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle h2{
+  font-size: 48px;
+  color: #1D164D;
+  text-align: left;
+  padding: 187px 137px;
+}
+
+.subtitle .input-container{
+  padding: 0;
+}

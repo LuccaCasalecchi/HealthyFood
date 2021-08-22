@@ -1,0 +1,11 @@
+.container{
+  display: flex;
+  height: 100vh;
+}
+
+.container > div{
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  padding-left: 10rem;
+}

@@ -1,0 +1,19 @@
+.container{
+  display: flex;
+  height: 100vh;
+}
+
+.container > div{
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  padding-left: 10rem;
+}
+
+.container h1{
+  color: #2D3561;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  align-items: center;
+}

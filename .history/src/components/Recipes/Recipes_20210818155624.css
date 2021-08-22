@@ -1,0 +1,8 @@
+.recipes-container{
+  background-color: rgb(205, 255, 248);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+}

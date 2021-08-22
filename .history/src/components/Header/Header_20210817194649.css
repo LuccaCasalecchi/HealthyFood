@@ -1,0 +1,20 @@
+.header-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 6%;
+}
+
+.header-container a {
+  text-decoration: none;
+  color: #BADC58;
+  font-weight: 700;
+}
+
+.header-container .logo{
+  font-size: 32px;
+}
+
+.header-container .register{
+  font-size: 16px;
+}

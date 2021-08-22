@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-primary);
+}
+
+
+
+
+/*Phone*/
+@media (min-width: 320px) 
+  and (max-width: 480px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 481px) 
+  and (max-width: 1100px) {
+  :root {
+    font-size: 56.25%;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1101px)
+  and (max-width: 1600px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
+
+/*Ultra*/
+@media (min-width: 1601px) {
+  :root {
+    font-size: 62.5%;
+  }
+}

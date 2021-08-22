@@ -1,0 +1,264 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 15rem  100rem;
+  position: absolute;
+}
+
+.nav__logo {
+  color: #BADC58 ;
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#hamburguer__checkbox{
+  position: absolute;
+  opacity: 0;
+}
+
+.menu__list {
+  min-width: 45.5rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.list__item a {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.item__register {
+  padding: 1.5rem 2rem;
+
+  background: white;
+  color: #BADC58;
+  border-radius: .5rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*Phone*/
+@media (min-width: 320px) 
+  and (max-width: 480px) {
+  .nav {
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    background: var(--color-white);
+    box-shadow: 5px 10px 20px 6px rgba(0,0,0,0.07);
+  }
+
+  .nav__logo {
+    width: 100%;
+
+    text-align: center;
+  }
+  
+  .menu__hamburguer label{
+    width: 30px;
+    height: 22px;
+    display: block;
+    position: relative;
+    
+    cursor: pointer;
+  }
+  
+  .menu__hamburguer label span{
+    width: 100%;
+    height: 5px;
+    display: block;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+
+    background: var(--color-primary);
+    border-radius: 30px;
+  }
+  
+  .menu__hamburguer label span:nth-child(1){
+    top: 0;
+  }
+  
+  .menu__hamburguer label span:nth-child(2){
+    top: 8px;
+  }
+  
+  .menu__hamburguer label span:nth-child(3){
+    top: 16px;
+  }
+  
+  #hamburguer__checkbox:checked + label span:nth-child(1){
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+  
+  #hamburguer__checkbox:checked + label span:nth-child(2){
+    opacity: 0;
+  }
+  
+  #hamburguer__checkbox:checked + label span:nth-child(3){
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  
+  .menu__list {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 9rem;
+    list-style: none;
+    padding: 1.5rem 0;
+
+    transform: translateY(-9rem);
+    transition: .2s ease-in-out;
+    z-index: -1;
+    
+    background: var(--color-primary);
+    opacity: 0;
+  }
+
+  #hamburguer__checkbox:checked ~ .menu__list {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .list__item {
+    margin-bottom: 2rem;
+  }
+  
+  .list__item a {
+    font-size: 2.4rem;
+  }
+  
+  .item__register {
+    padding: .25rem .5rem;
+    font-size: 2.4rem;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 481px) 
+  and (max-width: 1100px) {
+  .nav {
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    background: var(--color-white);
+    box-shadow: 5px 10px 20px 6px rgba(0,0,0,0.07);
+  }
+
+  .nav__logo {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  
+  .menu__hamburguer label{
+    width: 30px;
+    height: 22px;
+    display: block;
+    position: relative;
+    
+    cursor: pointer;
+  }
+  
+  .menu__hamburguer label span{
+    width: 100%;
+    height: 5px;
+    display: block;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+
+    background: var(--color-primary);
+    border-radius: 30px;
+  }
+  
+  .menu__hamburguer label span:nth-child(1){
+    top: 0;
+  }
+  
+  .menu__hamburguer label span:nth-child(2){
+    top: 8px;
+  }
+  
+  .menu__hamburguer label span:nth-child(3){
+    top: 16px;
+  }
+  
+  #hamburguer__checkbox:checked + label span:nth-child(1){
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+  
+  #hamburguer__checkbox:checked + label span:nth-child(2){
+    opacity: 0;
+  }
+  
+  #hamburguer__checkbox:checked + label span:nth-child(3){
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  
+  .menu__list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    justify-content: space-around;
+    padding: 1rem;
+    list-style: none;
+    transform: translateY(-9rem);
+    transition: .2s ease-in-out;
+    z-index: -2;
+    
+    background: var(--color-primary);
+    opacity: 0;
+  }
+
+  #hamburguer__checkbox:checked ~ .menu__list {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    justify-content: space-around;
+    padding: 1rem;
+    list-style: none;
+    transform: translateY(0);
+    z-index: -2;
+    
+    background: var(--color-primary);
+    opacity: 1;
+  }
+  
+  .item__register {
+    padding: .25rem .5rem;
+  }
+}

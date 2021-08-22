@@ -1,0 +1,67 @@
+:root {
+  --color-primary: #BADC58;
+  --color-secondary: #fff;
+  --color-text: #9E9BAF;
+  --color-text-title: #1D164D;
+  --color-white: #FFF;
+  --color-invalid: #e74c3c;
+  --color-valid: #27ae60;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-primary);
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('../assets/fonts/Muli.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('../assets/fonts/Muli-Bold.ttf') format("truetype");
+  font-weight: bold;
+}
+
+/*Phone*/
+@media (min-width: 320px) 
+  and (max-width: 480px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 481px) 
+  and (max-width: 1100px) {
+  :root {
+    font-size: 56.25%;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1101px)
+  and (max-width: 1600px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
+
+/*Ultra*/
+@media (min-width: 1601px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
