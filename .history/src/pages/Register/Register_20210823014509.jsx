@@ -1,12 +1,37 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+
 import api from "../../api/api";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 
 import imageService from "../../images/bloco_services.svg";
 import "./Register.css";
+
+const schema = yup.object().shape({
+  name: yup
+    .string()
+    .required("Name is Required")
+    .max(50, "Character limit exceeded"),
+
+  birthday: yup.string().required("Date is Required"),
+
+  cpf: yup
+    .string()
+    .required("CPF is required")
+    .max(11, "Character limit exceeded")
+    .min(11, "This field requires at least 11 characters"),
+
+  cep: yup
+    .string()
+    .required("CEP is required")
+    .max(8, "Character limit exceeded")
+    .min(8, "This field requires at least 11 characters"),
+});
 
 export default function Register() {
   //declare state os inputs
@@ -15,9 +40,15 @@ export default function Register() {
   const [cep, setCep] = useState("");
   const [adress, setAdress] = useState("");
   const [district, setDistrict] = useState("");
-  
-
   const { goBack } = useHistory();
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   //get the adress from user
   async function getUserAdress(cep) {
@@ -27,19 +58,15 @@ export default function Register() {
       setUf(response.data.uf);
       setAdress(response.data.logradouro);
       setDistrict(response.data.bairro);
-      
     } catch (error) {
       setCity("");
       setUf("");
       setAdress("");
       setDistrict("");
-      
     }
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-
+  function Submit(e) {
     const userData = {
       name: e.target.elements.name.value,
       birthday: e.target.elements.birthday.value,
@@ -53,45 +80,45 @@ export default function Register() {
 
     localStorage[`healthyFoodCommerce${userData.CPF}Registry`] =
       JSON.stringify(userData);
-      goBack()
+    goBack();
   }
 
   return (
     <div className="container">
       <div>
         <h1>Register</h1>
-        <form onSubmit={handleSubmit} action='/'>
-          <Input 
-          placeholderProp="Nome" 
-          id="name" 
-          required={true}
-          pattern='[a-zA-Z ]+$' 
-          title='Must contain letters only.'
-          />
-          
+        <form onSubmit={Submit(e)} action="/">
           <Input
+            {...register("name", { required: true })}
+            name="name"
+            placeholderProp="Nome"
+            id="name"
+          />
+
+          <Input
+            name="birthday"
+            {...register("birthday", { required: true })}
             placeholderProp="Data de Nascimento"
             id="birthday"
-            required={true}
             type="date"
+            error={errors.birthday?.message}
           />
-          <Input 
-          placeholderProp="CPF" 
-          id="CPF" 
-          required={true} 
-          pattern='[0-9]{11}'
-          title='Must contain numbers only.'
-          />
-          
           <Input
+            name="CPF"
+            {...register("CPF", { required: true })}
+            placeholderProp="CPF"
+            id="CPF"
+          />
+
+          <Input
+            name="CEP"
+            {...register("CEP", { required: true })}
             placeholderProp="CEP"
             id="CEP"
-            required={true}
-            pattern='[0-9]{8}'
             onChange={(e) => setCep(e.target.value)}
-            title='Must contain numbers only.'
             onBlur={(e) => getUserAdress(cep)}
           />
+
           <Input
             placeholderProp="Rua"
             id="adress"
@@ -116,8 +143,6 @@ export default function Register() {
           <Input
             placeholderProp="Estado"
             id="UF"
-            pattern='[A-Za-z]{2}'
-            title='Must contain at least two letters.'
             required={true}
             value={uf}
             onChange={(e) => setUf(e.target.value)}

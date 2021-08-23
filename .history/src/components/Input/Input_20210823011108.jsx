@@ -1,7 +1,7 @@
 import React from 'react'
 import './Input.css'
 
-export default function Input({name,title,placeholderProp,id,type,pattern,...rest}) {
+export default function Input({name,title,placeholderProp,id,type,...rest}) {
   return (
     <div className="input-container">
       <input 
@@ -10,7 +10,6 @@ export default function Input({name,title,placeholderProp,id,type,pattern,...res
       placeholder={placeholderProp}
       id={id}
       title={title}
-      pattern={pattern}
       {...rest}
       />
     </div>

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  padding-left: 10rem;
+  @media (max-width: 769px) {
+    padding: 5rem;
+  }
+  @media (max-width: 478px) {
+    padding: 1rem;
+  }
+}
+
+form{
+  display: grid;
+  gap: 1rem;
+  flex-direction: row;
+}

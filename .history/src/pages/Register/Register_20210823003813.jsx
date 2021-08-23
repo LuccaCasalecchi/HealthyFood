@@ -61,35 +61,19 @@ export default function Register() {
       <div>
         <h1>Register</h1>
         <form onSubmit={handleSubmit} action='/'>
-          <Input 
-          placeholderProp="Nome" 
-          id="name" 
-          required={true}
-          pattern='[a-zA-Z ]+$' 
-          title='Must contain letters only.'
-          />
-          
+          <Input placeholderProp="Nome" id="name" required={true} />
           <Input
             placeholderProp="Data de Nascimento"
             id="birthday"
             required={true}
             type="date"
           />
-          <Input 
-          placeholderProp="CPF" 
-          id="CPF" 
-          required={true} 
-          pattern='[0-9]{11}'
-          title='Must contain numbers only.'
-          />
-          
+          <Input placeholderProp="CPF" id="CPF" required={true} />
           <Input
             placeholderProp="CEP"
             id="CEP"
             required={true}
-            pattern='[0-9]{8}'
             onChange={(e) => setCep(e.target.value)}
-            title='Must contain numbers only.'
             onBlur={(e) => getUserAdress(cep)}
           />
           <Input
@@ -116,8 +100,6 @@ export default function Register() {
           <Input
             placeholderProp="Estado"
             id="UF"
-            pattern='[A-Za-z]{2}'
-            title='Must contain at least two letters.'
             required={true}
             value={uf}
             onChange={(e) => setUf(e.target.value)}

@@ -1,0 +1,30 @@
+
+
+    h1 {
+      color: var(--secondary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      align-items: center;
+      @media (max-width: 769px) {
+        text-align: center;
+      }
+    }
+
+    .container{
+      display: flex;
+      height: 100vh;
+    }
+
+    .container > div{
+      display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    padding-left: 10rem;
+    @media (max-width: 769px) {
+      padding: 5rem;
+    }
+    @media (max-width: 478px) {
+      padding: 1rem;
+    }
+    }

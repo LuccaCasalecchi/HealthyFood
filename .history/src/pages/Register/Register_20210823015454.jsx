@@ -66,7 +66,6 @@ export default function Register() {
           id="name" 
           required={true}
           pattern='[a-zA-Z ]+$' 
-          title='Must contain letters only.'
           />
           
           <Input
@@ -80,7 +79,6 @@ export default function Register() {
           id="CPF" 
           required={true} 
           pattern='[0-9]{11}'
-          title='Must contain numbers only.'
           />
           
           <Input

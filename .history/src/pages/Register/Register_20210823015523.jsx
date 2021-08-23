@@ -66,7 +66,6 @@ export default function Register() {
           id="name" 
           required={true}
           pattern='[a-zA-Z ]+$' 
-          title='Must contain letters only.'
           />
           
           <Input

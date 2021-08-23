@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  padding-left: 10rem;
+  @media (max-width: 769px) {
+    padding: 5rem;
+  }
+  @media (max-width: 478px) {
+    padding: 1rem;
+  }
+}
+
+form{
+  display: flex;
+ flex-wrap: wrap;
+  flex-direction: row;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 978px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20rem
+  }
+  margin: 0 auto;
+}
+
+form > div{
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+
+img {
+transform: scaleX(-1);
+height: 100vh;
+position: absolute;
+right: 0;
+z-index: -99;
+@media (max-width: 1256px) {
+  display: none;
+}
+}
+
