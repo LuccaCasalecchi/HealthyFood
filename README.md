@@ -1,5 +1,7 @@
 # HealthyFood WebSite
 
+A project that interacts directly with the postal service API.
+
 ## To run this project, please:
 
 - #### `git clone https://github.com/LuccaCasalecchi/HealthyFood `
